@@ -1,1 +1,3 @@
-This InfiniteScroll Plugin automatically detects whether the DOM container contains scrollbar or the scroll to be bound for window.
+This InfiniteScroll Plugin automatically detects whether the DOM container contains scrollbar or not. 
+
+The scroll is bound to window if the scrollbar is not found with the configuration.
