@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        Infinite Scroll
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" type="text/css" id = "theme" href="css/vendor/bootstrap-theme-1.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+
+
+
+
+    <!-- bootstrap Begins -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Infinite Scroll</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav f-right">
+                    <li><a href="./index.html">PlayGround</a></li>
+                    <li><a href="./docs.html">Docs</a></li>
+                    <li class="active"><a href="#">Contribution</a></li>
+                    <li><a id = "themeSwitcher" href="javascript:void(0)">Switch Theme</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>Infinite Scroll <small>Contribution</small></h1>
+                </div>
+
+                <div class="well">
+                    <h1>
+                    <span class = "animater-text">M</span>
+                    <span class = "animater-text">O</span>
+                    <span class = "animater-text">G</span>
+                    <span class = "animater-text">A</span>
+                    <span class = "animater-text">N</span>
+                    <span class = "animater"> </span>
+                    <span class = "animater-text">K</span>
+                    <span class = "animater-text">U</span>
+                    <span class = "animater-text">M</span>
+                    <span class = "animater-text">A</span>
+                    <span class = "animater-text">R</span>
+                    <span class = "animater"> </span>
+                    <span class = "animater-text">P</span>
+                    <span class = "animater-text">C</span>
+                    </h1>
+                    <h4>
+                    <br/>
+                    <br/>
+                    <div class="alert alert-info" role="alert">Web UI Developer</div>
+                    <br/>
+                        <br/>
+
+                        <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Interests in</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br/>
+                        <p>
+                            <button class="btn btn-success" type="button">
+                              <span class="glyphicon glyphicon-star" aria-hidden="true"></span> OOJS 
+                            </button>
+                        </p>
+                        <p>
+                            <button class="btn btn-success" type="button">
+                              <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Angular JS 
+                            </button>
+                        </p>
+                        <p>
+                            <button class="btn btn-success" type="button">
+                              <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Node JS 
+                            </button>                            
+                        </p>
+                    </div>
+
+                </div>
+
+                        
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap Ends -->
+
+</body>
+<script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+<script type="text/javascript" src="js/infiniteScroll.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<style type="text/css">
+    .animater-text{
+        color:#000;
+        font-weight: bold;
+text-shadow:#fff 6px 4px 11px;
+
+    }
+    .effect{
+        color:#fff;
+text-shadow:#000 6px 4px 11px;
+display: inline;
+    }
+    .completed-effect.animater-text{
+        text-shadow:none;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var len = $('.animater-text').length,
+        counter = 0,
+        authorNameIndxs = [],
+        doAnimate = function(){
+            var target = (typeof shuffledAuthorName[counter] == "undefined") ? (counter = -1, shuffledAuthorName[counter], $('.animater-text').addClass('completed-effect')) : ($('.animater-text').removeClass('completed-effect'), shuffledAuthorName[counter]);
+            counter++;
+            $('.animater-text').eq(target).toggleClass('effect'); 
+            setTimeout(doAnimate,500);   
+        },
+        shuffler = function(inputArr){
+            var iArr = inputArr,
+            iArrLen = inputArr.length;
+            while(iArrLen){
+                var randomIndx = Math.floor(Math.random() * iArrLen--)
+                inputArr[iArrLen] = [inputArr[randomIndx], inputArr[randomIndx] = inputArr[iArrLen]][0];
+            }
+            return inputArr;
+        },
+        getRandomInt = function (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
+        $('.animater-text').each(function(key,val){
+            authorNameIndxs.push(key);
+        })
+        shuffledAuthorName = shuffler(authorNameIndxs);
+        doAnimate();    
+    })
+</script>
+</html>

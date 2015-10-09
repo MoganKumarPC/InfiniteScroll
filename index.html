@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        Infinite Scroll
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" type="text/css" id = "theme" href="css/vendor/bootstrap-theme-1.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+    <span id='loader'>loading...</span>
+    <!-- bootstrap Begins -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Infinite Scroll</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav f-right">
+                    <li class="active"><a href="#">PlayGround</a></li>
+                    <li><a href="./Docs.html">Docs</a></li>
+                    <li><a href="./contribution.html">Contribution</a></li>
+                    <li><a id = "themeSwitcher" href="javascript:void(0)">Switch Theme</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>Infinite Scroll <small>PlayGround</small>&nbsp;<small class = "fs47-per"><a href="playground.html"> InfiniteScroll Version - (click here for Periodical Async Data Fetch)</a></small></h1>
+                </div>
+
+                <!-- Infinite scroll Begins -->
+                <div class="wrapper">
+                    <div class="i-scroll-container1">
+                        <p>This container Demonstrates the infinite scroll inside scrollable DOM container</p>
+                        <p>The sample Data is fetched from Apple itunes API as a JSON</p>
+                        <p>This JSON Data contains the search results of artists (AR Rahman)</p>
+                        <p>The search data fetched from: </p>
+                        <p><a href = "javascript:void(0)">https://itunes.apple.com/</a></p>
+                        
+                    </div>
+                    <hr/>
+                    <div class="i-scroll-container2">
+                        <p>Country List comes Here</p>
+                        <p>This container Demonstrates Fetching JSON from local File System</p>
+                        <p>The country list JSON found here is from:</p>
+                        <p><a href = "javascript:void(0)">https://gist.github.com/Keeguon/2310008</a></p>
+                        <p>This Data is stored in locally in this project data file system</p>
+                    </div>
+                    <hr/>
+                    <div class="i-scroll-container3">
+                        <p>This container Demonstrates the infinite scroll without the scrollable DOM container</p>
+                        <p>The sample Data is fetched from pinterest API as a JSON</p>
+                        <p>This JSON data contains the sample board pins of fisher price</p>
+                        <p>The search data fetched from: </p>
+                        <p><a href= "javascript:void(0)">https://api.pinterest.com</a></p>
+                    </div>
+                    <hr/>
+                    <!-- <div class="i-scroll-container4">
+                        <p>This container Demonstrates the infinite scroll without the scrollable DOM container</p>
+                        <p>The sample Data is fetched from filltext API as a JSON</p>
+                        <p>This JSON data contains the random sample of firstname and lastname</p>
+                        <p>The name data fetched from: </p>
+                        <p><a href= "javascript:void(0)">http://www.filltext.com/</a></p>
+                    </div>
+                    <hr/> -->
+
+                    <br/>
+
+                </div>
+                <!-- infinite scroll ends -->
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap Ends -->
+
+    <script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+    <script type="text/javascript" src="js/infiniteScroll.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>

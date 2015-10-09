@@ -1,0 +1,186 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  /*src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/dPJ5r9gl3kK6ijoeP1IRsvY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');*/
+  src: local('Lato Light'), local('./fonts/Lato-Light') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('./fonts/Lato-Light') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('./fonts/Lato-Regular') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('./fonts/Lato-Regular') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('./fonts/Lato-Bold') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('./fonts/Lato-Bold') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+/****/
+
+
+* {
+            outline: none;
+        }
+        
+        body {
+            font-size: 17px;
+        }
+        
+        .navbar-fixed-top {
+            font-size: 17px;
+        }
+        
+        .navbar-brand {
+            font-size: 25px;
+        }
+        
+        .f-right {
+            float: right;
+        }
+
+         .i-scroll-container1 {
+            height: 150px;
+            overflow: auto;
+            font-weight: bold;
+        }
+        
+        .i-scroll-container2,
+        .i-scroll-container3,
+        .i-scroll-container4 {
+            /*padding: 10px;*/
+            /*border: 1px solid #000;*/
+            /*margin: 10px;*/
+            font-weight: bold;
+        }
+        
+        #loader {
+            display: none;
+            background-color: #000;
+            color: #FFF;
+            position: fixed;
+            right: 0;
+            top: 50px;
+            padding: 10px;
+            display: inline-block;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .page-header{
+            margin: 86px 0 21px;
+        }
+
+        .panel-info .panel-heading .panel-title{
+            color: #000;
+            font-weight: bold;
+        }
+        .panel-info .panel-body .badge{
+            background-color: #5bc0de;
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .panel-success .panel-body .badge{
+            background-color: #5cb85c;
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .panel-success .panel-heading .panel-title{
+            font-weight: bold;
+        }
+
+        .panel-success .panel-heading .badge{
+            background-color: #000;
+            color: #5cb85c;
+            font-weight: bold;
+            font-size: 14px;
+            
+        }
+
+        .panel-info .panel-heading .badge{
+            background-color: #000;
+            color: #5bc0de;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .panel-body, .panel-heading{
+            font-size:19px;
+        }
+        .panel{
+            border: 3px solid transparent;
+        }
+        .panel.panel-success:hover{
+            border-color: #5cb85c;
+        }
+        .panel.panel-info:hover{
+            border-color: #5bc0de;
+        }
+        .panel.panel-default{
+            /*border-color: #485563;*/
+            border-width: 1px;
+            /*border-color: #FF0; */
+                box-shadow: 0px 0px 21px 0px #df691a;
+    border-radius: 10px;
+
+        }
+        .panel .panel-heading{
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+        }
+        .panel.panel-default .panel-heading{
+            border-radius: 10px 10px 0 0;
+        }
+
+        .panel.panel-default .panel-heading .badge{
+            background-color: #CCC;
+            color: #000;
+        }
+
+        .txt-align-cntr{
+          text-align: center;
+        }
+        .i-blk{
+          display: inline-block;
+        }
+        .center-cntnr{
+          margin: 0 auto;
+        }
+        .fs47-per{
+          font-size: 47%;
+        }

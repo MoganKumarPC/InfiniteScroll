@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        Infinite Scroll
+    </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+    <link rel="stylesheet" type="text/css" id = "theme" href="css/vendor/bootstrap-theme-1.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+
+
+
+    <!-- bootstrap Begins -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Infinite Scroll</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav f-right">
+                    <li><a href="./index.html">PlayGround</a></li>
+                    <li class="active"><a href="#">Docs</a></li>
+                    <li><a href="./contribution.html">Contribution</a></li>
+                    <li><a id = "themeSwitcher" href="javascript:void(0)">Switch Theme</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>Infinite Scroll <small>Documentation For use</small></h1>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">What is Infinite Scroll ?</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Infinite Scroll is a feature that loads the next set of posts automatically when visitors approach the bottom of the home page or posts page. It’s designed to help visitors read through many posts without effort.</p>
+                        <p>Reference from: <a href = "https://en.support.wordpress.com/infinite-scroll/">https://en.support.wordpress.com/infinite-scroll/</a></p>
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Why is Infinite Scroll needed ?</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                        <li>Navigation is enhanced</li>
+                        <li>SEO is unharmed</li> 
+                        <li>Accessibility is maintained, as well as graceful degradation in finicky browsers</li>  
+<li>You can reduce page load size, but usually savings are compared to a page you wouldn’t make unless there was a solution like Infinite Scroll to tame it…</li>
+</ul>
+<p>Reference from : <a href = "http://www.sitepoint.com/ux-infinite-scroll-good-bad-maybe/">http://www.sitepoint.com/ux-infinite-scroll-good-bad-maybe/</a></p>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Default Options:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>fetchItemsData: <span class="badge">''</span></p>
+                        <p>noOfItems: <span class="badge">5</span></p>
+                        <p>isServerDataFetch: <span class="badge">false</span></p>
+
+                        <p>careInitLoad: <span class="badge">false</span></p>
+                        <p>serverFetchParams: <span class="badge">""</span></p>
+
+                        <p>objectProcessor: <span class="badge">""</span></p>
+
+
+                        <p>loaderDOM: <span class="badge">""</span></p>
+                        <p>scrollTopOnReload: <span class="badge">false</span></p>
+                        <p>delayStart: <span class="badge">0</span></p>
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">fetchItemsData</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">fetchItemsData </span> is the option to supply the input data to the <span class="badge">InfiniteScroll</span> Library.
+                        <div class="clearfix"></div>
+                        <br/>
+
+                        <p> The input can be </p>
+                        <ul>
+                            <li> Direct Array </li>
+                            <li> Local file system JSON based Data Fetch </li>
+                            <li> Server side Data Fetch with server URL </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">noOfItems</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">noOfItems</span> is the option to supply the number of items to be shown while mouse scrolling.
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">isServerDataFetch</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">isServerDataFetch</span> is the option to inform the <span class="badge">infiniteScroll</span> library whether the data is available at Local File system or to fetch the data from server via ajax.
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">careInitLoad</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">careInitLoad</span> is the option to inform the <span class="badge">infiniteScroll</span> library whether the initial data is to be loaded via this library or not.
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">serverFetchParams</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">serverFetchParams</span> is the option to fetch the data periodically when scroll reaches end. This option should contain the query string to be attached with the domain URL.
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">objectProcessor</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">objectProcessor</span> is one the key advantageous option in this <span class="badge">infiniteScroll</span> library. This option takes the result and process the result to fetch the array which is then supplied as the input. on any failure, appropriate errors will be thrown @ console.
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">loaderDOM</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">loaderDOM</span> is the option which will be shown during data fetch activity and hidden on data fetch completion. The developer can advantage of decorating the loader DOM with CSS styles and their position.
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">scrollTopOnReload</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">scrollTopOnReload</span> is the option to decide whether the page should be available with the same scrolled position or to be moved on to the top when the page is reloaded. 
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Configuration Option Usage &nbsp; <span class="badge">delayStart</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <span class="badge">delayStart</span> is the option to create the delayed instantiation. The timing scale is measured in millisecond units. <br/>Example: making delay for 3s = 3000ms. &nbsp; &lt;delayStart : 3000&gt;
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Global Methods &nbsp; </h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>$.infiniteScroll &nbsp; <span class="badge">init</span></p>
+                        <ul>
+                        <li> This is the point of instantiation. Calling this method would re-instantiate the already configured DOM. Not Encouraged to use unless necessary. </li>
+                        </ul>
+                        <p>$.infiniteScroll &nbsp; <span class="badge">avoidNSConflict</span></p>
+                        <ul>
+                        <li> This Method avoids the namespace conflict by providing different name to work with the library APIs. </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Option Configuration Methods &nbsp;</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>resultData( ) &nbsp; <span class="badge">returns function ( a, b, c ) { }</span></p>
+                        <ul>
+                        <li>
+                            This method can be mapped to the user-defined methods to retrieve the result data received or the result data reached so far if the data fetch is periodically asynchronous.
+                        </li>
+                        </ul>
+                        <p>domBuilder( ) &nbsp; <span class="badge">returns function ( c ) { }</span></p>
+                        <ul>
+                        <li>
+                            This method can be mapped to the user-defined methods to build or update the DOM with its contents.
+                        </li>
+                        </ul>
+
+                        <p><u>Method Arguments Description</u></p>
+                        <ul>
+                        <li><span class="badge">argument : a</span>&nbsp; The DOM which requested for data update</li>    
+                        <li><span class="badge">argument : b</span>&nbsp; Number of items currently supplied to update. A method to update a view.</li>    
+                        <li><span class="badge">argument : c</span>&nbsp; Overall Data Source available to be supplied as per configuration. A method to fetch the data source for any manipulation. <strong>Example:</strong> To count the number items rendered by fetching the data with several ajax calls on reaching the scroll end.</li>    
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Useful Events &nbsp;</h3>
+                    </div>
+                    <div class="panel-body">
+                        
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">scrollReachedLimit &nbsp; <span class="badge">message { a, b, c }</span></h3>
+                            </div>
+                            <div class="panel-body">
+                                A jQuery Event is triggered when the scroll Reaches the limit or end but still possess data source to render.
+                            </div>
+                        </div>
+
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">scrollReachedEnd &nbsp; <span class="badge">message { a, b, c }</span></h3>
+                            </div>
+                            <div class="panel-body">
+                                A jQuery Event is triggered when the scroll Reaches the End and no more data source is to be rendered.
+                            </div>
+                        </div>
+
+                        <p><u>Method Arguments Description</u></p>
+                        <ul>
+                        <li><span class="badge">argument : a</span>&nbsp; Actual DOM Event</li>    
+                        <li><span class="badge">argument : b</span>&nbsp; Object: Event Type.</li>    
+                        <li><span class="badge">argument : c</span>&nbsp; Object: contains information (data items loaded so far, DOM Instance,  Internal Element self scroll or Window scroll).</li>    
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Internal Exceptional Handling  &nbsp; </h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Invalid Input &nbsp; <span class="badge">00X</span></h3>
+                            </div>
+                            <div class="panel-body">
+                                
+                                <ul>
+                            <li><span class="badge">Error Code : 001</span> &nbsp; If {isServerDataFetch:true}, {fetchItemsData} should contain only hostname (location.host), query string is to be separated it with {serverFetchParams}. So, Internal Error Code (Invalid Input Status Follows 00X) --> 001</li>
+                            <br/>
+                            <li><span class="badge">Error Code : 002</span> &nbsp; Input Expected as (array or valid json). But supplied --> <span class="badge">Invalid JSON type</span> So, Internal Error Code (Invalid Input Status Follows 00X) --> 002</li>
+                            
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Unreachable Object Tree &nbsp; <span class="badge">0X0</span></h3>
+                            </div>
+                            <div class="panel-body">
+                            <ul>
+                            
+                            <li><span class="badge">Error Code : 010</span> &nbsp; Specified 'objectProcessor' in options --> {objectProcessor} is not found with the fetched data. So, Internal Error Code (Unreachable Object Tree Status Follows 0X0) --> 010</li>
+                            </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Network Data Status &nbsp; <span class="badge">X00</span></h3>
+                            </div>
+                            <div class="panel-body">
+                                
+                            <ul>
+                            <li><span class="badge">Error Code : 100</span> &nbsp; If Network Data Response From --> {fetchItemsData} ? {serverFetchParams} results with &lt;success&gt; status. So, Internal Error Code (Network Data Status -- Success -- Follows X00) --> 100</li>
+                            <br/>
+                            <li><span class="badge">Error Code : 200</span> &nbsp; If Network Data Response From --> {fetchItemsData} ? {serverFetchParams} results with &lt;failure&gt; status. So, Internal Error Code (Network Data Status -- Failure -- Follows X00) --> 200</li>
+                            
+                            </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Useful Information &nbsp;</h3>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <ul class = "center-cntnr txt-align-cntr">
+                            <li class = "i-blk txt-align-cntr">
+                            <p>For any Issues found while using this library: </p>
+                            <p class = "txt-align-cntr"><strong>comment</strong></p> 
+                            <p class = "txt-align-cntr">@ </p> 
+                            <p class = "txt-align-cntr"><a href = "https://github.com/MoganKumarPC"><strong>https://github.com/MoganKumarPC</strong></a></p> </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap Ends -->
+
+
+</body>
+<script type="text/javascript" src="js/vendor/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+<script type="text/javascript" src="js/infiniteScroll.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</html>
